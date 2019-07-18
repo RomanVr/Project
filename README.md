@@ -1,3 +1,3 @@
 # Project
-## AEON training project
+## AEON training project **Social Network**
 ## The REACT framework is used
