@@ -1,0 +1,22 @@
+plugins:
+  - babel
+  - react
+
+extends:
+  - 'airbnb-base'
+  - 'react-app'
+
+env:
+  node: true
+  browser: true
+
+globals:
+  React: true
+
+ecmaFeatures:
+  jsx: true
+
+parser: babel-eslint
+
+rules:
+  no-console: 0
