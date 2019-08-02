@@ -4,7 +4,6 @@ import FormReg from '../Form/FormReg';
 import FormLogin from '../Form/FormLogin';
 import Nav from '../Nav';
 
-
 const routes = {
   root: {
     path: '',
