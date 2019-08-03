@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Input from '../Input/Input';
 
 class Form extends Component {
@@ -70,7 +71,7 @@ class Form extends Component {
             inputClass = 'form-control'
             required = {true}
           />
-          <input type = 'submit' value = 'далее'/>
+          <Link to = "/session/pass">Далее</Link>
         </form>
       </div>
     );

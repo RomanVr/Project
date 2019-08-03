@@ -2,19 +2,21 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import FormReg from '../Form/FormReg';
 import FormLogin from '../Form/FormLogin';
+import FormPass from '../Form/FormPass';
 import Nav from '../Nav';
 
 function App() {
   return (
     <div className = "container">
-      <Nav />
+      <Nav isLogin = { false } title = ""/>
       <div style = {{ marginTop: 80 }}/>
       <div>
         <Switch>
-          <Route exact path="/" component = { FormLogin } />
-          <Route path = "/session/new" component = { FormReg } />
+          <Route exact path="/" />
+          <Route exact path = "/session/new" component = { FormReg } />
+          <Route exact path = "/session/pass" component = { FormPass} />
           <Route path = "/session" component = { FormLogin } />
-          <Route path = "/chat" component = { FormLogin } />
+          <Route path = "/chat" />
         </Switch>
       </div>
     </div>
