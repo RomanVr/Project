@@ -5,10 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+import store from './stores/auth';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <App store = { store }/>
   </BrowserRouter>,
   document.getElementById('root'),
 );
