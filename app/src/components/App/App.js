@@ -14,7 +14,7 @@ function App(props) {
       <Nav isLogin = { false } title = ""/>
       <div style = {{ marginTop: 80 }}/>
       {/* <Mobx store = { props.store }/> */}
-      <div>
+      <div>y
         <Switch>
           <Route exact path="/" />
           <Route exact path = "/session/new" component = { FormReg } />

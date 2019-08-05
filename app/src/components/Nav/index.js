@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import _ from 'lodash';
-import registration from './registration';
-import logout from './logout';
+import Registration from './Registration';
+import Logout from './Logout';
 
 const routes = {
   root: {
@@ -39,7 +39,7 @@ export default class extends Component {
 
   render() {
     const Register = this.state.isLogin
-      ? logout : registration;
+      ? Logout : Registration;
     return (
       <div className = "container">
         <nav className = "navbar navbar-expand-lg navbar-info fixed-top bg-dark">
