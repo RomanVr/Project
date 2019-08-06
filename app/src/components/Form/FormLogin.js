@@ -4,11 +4,11 @@ import Input from '../Input/Input';
 class Form extends Component {
   constructor(props) {
     super(props);
+    console.log('--- Props ', props);
     this.state = {
       data: {
         login: '',
         password: '',
-        passwordConfirm: '',
       },
     };
 
@@ -44,6 +44,7 @@ class Form extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log('submit data: ', this.state.data);
+    this.props.userLogin(this.state.data);
   }
 
   handleInput(event) {

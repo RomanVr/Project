@@ -19,8 +19,9 @@ class Auth {
     return 'Guest';
   }
 
-  userLogin({ login, pass }) {
-    const user = toLogin(login, pass);
+  userLogin({ login, password }) {
+    const user = toLogin(login, password);
+    console.log('---User ', user);
     this.setUser(user);
   }
 
@@ -31,7 +32,9 @@ class Auth {
 
 decorate(Auth, {
   user: observable,
-  userLogin: action,
+  userLogin: action.bound,
   setUser: action,
   fullName: computed,
 });
+
+export default new Auth();

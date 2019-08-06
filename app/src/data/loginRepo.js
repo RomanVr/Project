@@ -7,7 +7,14 @@ const user = {
 
 const users = [user];
 
-const toLogin = (login, pass) => _.head(users
-  .filter(item => item.login === login && item.password === pass));
+const toLogin = (login, pass) => {
+  console.log('---users', users, ' ---login ', login);
+  const fUsers = users.filter((item) => {
+    console.log('---item', item);
+    return item.login === login && item.password === pass;
+  });
+  console.log('---users', fUsers);
+  return _.head(fUsers);
+};
 
 export default toLogin;

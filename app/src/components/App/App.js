@@ -9,17 +9,22 @@ import Nav from '../Nav';
 // import Mobx from '../Mobx';
 
 function App(props) {
+  const { store } = props;
+  console.log('---store ', store);
   return (
     <div className = "container">
       <Nav isLogin = { false } title = ""/>
       <div style = {{ marginTop: 80 }}/>
       {/* <Mobx store = { props.store }/> */}
-      <div>y
+      <div>
         <Switch>
           <Route exact path="/" />
           <Route exact path = "/session/new" component = { FormReg } />
           <Route exact path = "/session/pass" component = { FormPass} />
-          <Route path = "/session" component = { FormLogin } />
+          <Route
+            path = "/session"
+            render = { propsLogin => <FormLogin {...propsLogin} userLogin = { store.userLogin }/> }
+          />
           <Route path = "/chat" />
         </Switch>
       </div>
